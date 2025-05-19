@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { MobileTilesMenu } from "@/components/mobile-tiles-menu"
-import Image from "next/image"
 import Aktuality from "@/components/news"
 import VHDInfo from "@/components/VHDInfo"
 import NavigationMenu from "@/components/smallNavMenu"

@@ -40,8 +40,8 @@ export default function VHDInfo() {
 					Informace a aktuality
 				</h3>
 				<p className="text-gray-700">
-					"At vero eos et accusamus et iusto odio dignissimos ducimus
-					qui blanditiis praesentium voluptatum deleniti atque
+					&quot;At vero eos et accusamus et iusto odio dignissimos
+					ducimus qui blanditiis praesentium voluptatum deleniti atque
 					corrupti quos dolores et quas molestias
 				</p>
 			</div>
