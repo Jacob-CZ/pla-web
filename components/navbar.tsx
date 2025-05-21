@@ -151,11 +151,30 @@ export function Navbar() {
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
-								<Link href="#" legacyBehavior passHref>
-									<NavigationMenuLink className="px-4 py-2 hover:bg-primary-700 rounded-md transition">
-										Volná pracovní místa
-									</NavigationMenuLink>
+								<Link href="/test" legacyBehavior passHref>
+									<NavigationMenuTrigger className="bg-transparent hover:bg-primary-700">
+										Profil firmy
+									</NavigationMenuTrigger>
 								</Link>
+
+								<NavigationMenuContent>
+									<ul className="grid w-[400px] gap-1 p-2 md:grid-cols-2">
+										{profileItems.map((item) => (
+											<li key={item.title}>
+												<NavigationMenuLink asChild>
+													<Link
+														href={item.href}
+														className="block select-none space-y-1 rounded-md p-3 leading-none hover:bg-accent hover:text-accent-foreground no-underline outline-none transition-colors"
+													>
+														<div className="text-sm font-medium">
+															{item.title}
+														</div>
+													</Link>
+												</NavigationMenuLink>
+											</li>
+										))}
+									</ul>
+								</NavigationMenuContent>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>

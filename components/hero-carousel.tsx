@@ -12,7 +12,7 @@ const slides = [
 ]
 
 const tileItems = [
-	{ title: "Aktuální informace", href: "#" },
+	{ title: "Aktuální informace", href: "/home/aktualni-informace" },
 	{ title: "Pro žadatele", href: "#" },
 	{ title: "Zakázky a majetek", href: "#" },
 	{ title: "Info pro veřejnost", href: "#" },
