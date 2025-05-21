@@ -1,6 +1,5 @@
 import VerticalMenu from "@/components/cms/MulitilevelMenu"
 import TopNavBar, { TopNavBarExample } from "@/components/cms/NavBar"
-import { menuItems } from "@/lib/data/cms/mock"
 import fetchHierarchy from "@/lib/db/fetchHierarchy"
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"

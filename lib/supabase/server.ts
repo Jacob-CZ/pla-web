@@ -2,7 +2,7 @@
 // @ts-ignore
 import { createServerClient } from "@supabase/ssr"
 import { cookies } from "next/headers"
-import { Database } from "./db.types"
+import { Database } from "./db.types.ts"
 
 export function createClient() {
 	const cookieStore = cookies()
