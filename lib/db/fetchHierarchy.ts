@@ -59,6 +59,7 @@ export async function fetchHierarchy(
 }
 
 /**
+ * 
  * Transform flat data into a hierarchical structure
  *
  * @param rows Database rows
