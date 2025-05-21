@@ -12,7 +12,7 @@ interface EditorProps {
 }
 export default function Editor(props: EditorProps) {
 	const editorRef = useRef<MDXEditorMethods>(null)
-	const [data, setData] = useState<Tables<"cms_items">>(null)
+	const [data, setData] = useState<Tables<"cms_items"> | null>(null)
 	useEffect(() => {
 		async function fetchData() {
 			const supabase = createClient()
@@ -48,7 +48,7 @@ export default function Editor(props: EditorProps) {
 			.update({
 				content: markdown,
 			})
-			.eq("id", data?.id)
+			.eq("id", data?.id || "")
 	}
 	return (
 		<div className="relative">

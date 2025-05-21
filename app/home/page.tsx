@@ -7,7 +7,7 @@ export default function HomePage() {
 		<div className="grid md:grid-cols-2 pt-2 px-16 gap-20 grid-cols-1">
 			<Aktuality />
 			<VHDInfo />
-			<NavigationMenu />
+			{/* <NavigationMenu /> */}
 		</div>
 	)
 }

@@ -260,7 +260,6 @@ export function TopNavBarExample() {
 				userAvatar={{
 					fallback: "JD",
 				}}
-				onMobileMenuToggle={() => console.log("Mobile menu toggled")}
 			/>
 		</div>
 	)

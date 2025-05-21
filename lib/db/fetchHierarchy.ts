@@ -34,12 +34,10 @@ export async function fetchHierarchy(
 		idField = "id",
 		parentIdField = "previous_category_id",
 		orderBy = idField,
-		client,
 		category_slug
 	} = options
 
 	// Create connection if not provided
-	const shouldReleasePool = !client
 
 	try {
 		// Construct WHERE clause if filter provided
@@ -57,8 +55,6 @@ export async function fetchHierarchy(
 		throw new Error(`Error fetching hierarchical data: ${error.message}`)
 	} finally {
 		// Release connection if we created it
-		if (shouldReleasePool) {
-		}
 	}
 }
 
