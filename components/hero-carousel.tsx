@@ -85,8 +85,8 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 				</Link>
 			</div>
 
-			{/* Carousel Slides */}
-			<AnimatePresence mode="wait">
+			{/* Carousel Slides - Modified for cross-fade transition */}
+			<AnimatePresence initial={false}>
 				<motion.div
 					key={currentIndex}
 					initial={{ opacity: 0 }}
