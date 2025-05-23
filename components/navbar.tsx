@@ -17,6 +17,8 @@ import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import NavigationDropdown from "./MenuDropdown"
+import DropdownMenuHHH from "./MenuDropdown"
 
 const profileItems = [
 	{ title: "Informace o Povodí", href: "#" },
@@ -127,27 +129,7 @@ export function Navbar() {
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
-								<NavigationMenuTrigger className="bg-transparent hover:bg-primary-700">
-									Profil firmy
-								</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<ul className="grid w-[400px] gap-1 p-2 md:grid-cols-2">
-										{profileItems.map((item) => (
-											<li key={item.title}>
-												<NavigationMenuLink asChild>
-													<Link
-														href={item.href}
-														className="block select-none space-y-1 rounded-md p-3 leading-none hover:bg-accent hover:text-accent-foreground no-underline outline-none transition-colors"
-													>
-														<div className="text-sm font-medium">
-															{item.title}
-														</div>
-													</Link>
-												</NavigationMenuLink>
-											</li>
-										))}
-									</ul>
-								</NavigationMenuContent>
+								<DropdownMenuHHH>Profil firmy</DropdownMenuHHH>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
@@ -163,27 +145,9 @@ export function Navbar() {
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
-								<NavigationMenuTrigger className="bg-transparent hover:bg-primary-700">
+								<DropdownMenuHHH>
 									Povinná publicita
-								</NavigationMenuTrigger>
-								<NavigationMenuContent>
-									<ul className="grid w-[400px] gap-1 p-2 md:grid-cols-2">
-										{profileItems.map((item) => (
-											<li key={item.title}>
-												<NavigationMenuLink asChild>
-													<Link
-														href={item.href}
-														className="block select-none space-y-1 rounded-md p-3 leading-none hover:bg-accent hover:text-accent-foreground no-underline outline-none transition-colors"
-													>
-														<div className="text-sm font-medium">
-															{item.title}
-														</div>
-													</Link>
-												</NavigationMenuLink>
-											</li>
-										))}
-									</ul>
-								</NavigationMenuContent>
+								</DropdownMenuHHH>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
