@@ -37,17 +37,9 @@ const newsItems = [
 export default function Aktuality() {
 	return (
 		<div className=" mx-auto">
-			<h2 className="text-5xl font-bold tracking-[0.2em] mb-6">
-				AKTUALITY
-			</h2>
 			<div className="space-y-4">
 				{newsItems.map(({ id, image, title, isBold }) => (
-					<div
-						key={id}
-						className={`flex gap-4 bg-white ${
-							id % 2 === 1 ? "bg-gray-400" : "bg-gray-100"
-						} border-gray-400 border `}
-					>
+					<div key={id} className={`flex gap-4 bg-[#e7e9f5] `}>
 						<div className="relative h-20 w-fit flex-shrink-0">
 							<Image
 								src={image}

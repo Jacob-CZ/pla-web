@@ -104,26 +104,17 @@ export function Navbar() {
 								</Link>
 							</NavigationMenuItem>
 
-							{/* Logo in the middle */}
-							<NavigationMenuItem className="">
-								<div className="">
+							<NavigationMenuItem className="w-40 relative ">
+								<div className="bg-white h-24 absolute w-full -translate-y-8"></div>
+								<div className="absolute inset-0 flex items-center justify-center translate-y-20">
 									<Link href="/">
-										<motion.div
-											whileHover={{ scale: 1.05 }}
-											transition={{
-												type: "spring",
-												stiffness: 400,
-												damping: 10,
-											}}
-										>
-											<Image
-												src="/PLA.png"
-												alt="Povodí Labe"
-												width={80}
-												height={80}
-												className="bg-white p-1 "
-											/>
-										</motion.div>
+										<Image
+											src="/PLA.png"
+											alt="Povodí Labe"
+											width={160}
+											height={80}
+											className="bg-white p-1 "
+										/>
 									</Link>
 								</div>
 							</NavigationMenuItem>

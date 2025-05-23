@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Povodí Labe</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script type="text/javascript" src="./pla.js"></script>
+		<link rel="stylesheet" href="./home.css" />
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<div class="page-wrapper mx-auto">
+			<!-- Horní navigace -->
+			<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+				<div class="container-fluid">
+					<button
+						class="navbar-toggler mobile-menu-toggle left d-lg-none d-flex align-items-center gap-2"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#mainNav"
+						aria-controls="mainNav"
+						aria-expanded="false"
+						aria-label="Zobrazit menu"
+					>
+						<span class="navbar-toggler-icon"></span>
+						<span>Menu</span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="mainNav">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<!-- Domů -->
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Domů</a>
+							</li>
+
+							<!-- Místo pro logo mezi Domů a Profil firmy -->
+							<li
+								class="nav-item logo-holder d-none d-lg-block position-relative"
+							>
+								<div class="logo-wrapper">
+									<a href="#"
+										><img
+											src="images/loga/PLA.png"
+											alt="Povodí Labe"
+											class="navbar-logo-img"
+									/></a>
+								</div>
+							</li>
+
+							<!-- Profil firmy -->
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									>Profil firmy</a
+								>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#"
+											>Informace o Povodí</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Profil</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Orgány</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Organizační struktura</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Výroční zprávy</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Publicita</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Adresy a kontakty, DS</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											>Tel. seznam</a
+										>
+									</li>
+								</ul>
+							</li>
+
+							<!-- Další položky -->
+							<li class="nav-item">
+								<a class="nav-link" href="#"
+									>Volná pracovní místa</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#"
+									>Povinná publicita</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Kontakty</a>
+							</li>
+						</ul>
+
+						<form class="d-flex" role="search">
+							<div class="input-group">
+								<input
+									type="search"
+									class="form-control"
+									placeholder="Hledat"
+									aria-label="Vyhledávání"
+								/>
+								<button class="btn btn-light" type="submit">
+									<i class="bi bi-search"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</nav>
+
+			<h2 class="section-title">AKTUALITY</h2>
+
+			<div class="grid">
+				<!-- News Section (Aktuality) -->
+				<div class="news-section">
+					<div class="news-items">
+						<!-- News Item 1 -->
+						<div class="news-item news-item-odd">
+							<div class="news-image-container">
+								<img
+									src="/dam.png"
+									alt="News image"
+									class="news-image"
+								/>
+							</div>
+							<p class="news-title news-title-bold">
+								„At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias excepturi sint occaecati
+								cupiditate non provident, similique sunt in
+								culpa qui officia deserunt mollitia animi, id
+							</p>
+						</div>
+
+						<!-- News Item 2 -->
+						<div class="news-item news-item-even">
+							<div class="news-image-container">
+								<img
+									src="/dam.png"
+									alt="News image"
+									class="news-image"
+								/>
+							</div>
+							<p class="news-title">
+								„At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias excepturi sint occaecati
+								cupiditate non provident, similique sunt in
+								culpa qui officia deserunt mollitia animi, id
+								est laborum et dolorum fuga. Et
+							</p>
+						</div>
+
+						<!-- News Item 3 -->
+						<div class="news-item news-item-odd">
+							<div class="news-image-container">
+								<img
+									src="/dam.png"
+									alt="News image"
+									class="news-image"
+								/>
+							</div>
+							<p class="news-title">
+								„At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias excepturi sint occaecati
+								cupiditate non provident, similique sunt in
+								culpa qui officia deserunt mollitia animi, id
+								est laborum et dolorum fuga. Et
+							</p>
+						</div>
+
+						<!-- News Item 4 -->
+						<div class="news-item news-item-even">
+							<div class="news-image-container">
+								<img
+									src="/dam.png"
+									alt="News image"
+									class="news-image"
+								/>
+							</div>
+							<p class="news-title">
+								„At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias excepturi sint occaecati
+								cupiditate non provident, similique sunt in
+								culpa qui officia deserunt mollitia animi, id
+								est laborum et dolorum fuga. Et
+							</p>
+						</div>
+
+						<!-- News Item 5 -->
+						<div class="news-item news-item-odd">
+							<div class="news-image-container">
+								<img
+									src="/dam.png"
+									alt="News image"
+									class="news-image"
+								/>
+							</div>
+							<p class="news-title">
+								„At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias excepturi sint occaecati
+								cupiditate non provident, similique sunt in
+								culpa qui officia deserunt mollitia animi, id
+								est laborum et dolorum fuga. Et
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- VHD Info Section -->
+				<div class="vhd-section">
+					<div class="vhd-container">
+						<div>
+							<h2 class="vhd-title">Aktuální informace VHD</h2>
+							<p class="vhd-text">
+								„Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</div>
+
+						<div class="status-indicator">
+							<div class="status-dot"></div>
+							<span class="status-text">Nízké průtoky</span>
+						</div>
+
+						<div>
+							<h3 class="vhd-subtitle">Omezení plavby</h3>
+							<p class="vhd-text">
+								„Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</div>
+
+						<div>
+							<h3 class="vhd-subtitle">Mimořádné manipulace</h3>
+							<p class="vhd-text">
+								„Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</div>
+
+						<div>
+							<h3 class="vhd-subtitle">Informace a aktuality</h3>
+							<p class="vhd-text">
+								"At vero eos et accusamus et iusto odio
+								dignissimos ducimus qui blanditiis praesentium
+								voluptatum deleniti atque corrupti quos dolores
+								et quas molestias
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="menu">
+					<a class="menu-item" href="#">Správní členění</a>
+					<a class="menu-item" href="#">Stavy a průtoky</a>
+					<a class="menu-item" href="#">Srážky</a>
+					<a class="menu-item" href="#">Nádrže</a>
+					<a class="menu-item" href="#">Jakost vody</a>
+					<a class="menu-item" href="#">Protipovodňová ochrana</a>
+					<a class="menu-item" href="#">Labská vodní cesta</a>
+					<a class="menu-item" href="#">Záplavová území</a>
+					<a class="menu-item" href="#">Sucho / Povodně</a>
+					<a class="menu-item" href="#">Ostatní</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

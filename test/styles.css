@@ -1,0 +1,333 @@
+:root {
+  --blue-color: #03319f;
+  --light-blue-color: #4a90e2;
+  --white-color: #fff;
+  --gray-color: #f8f9fa;
+  --black-color: #000;
+  --yellow-color: #ff0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.page-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar.custom-navbar {
+  background-color: var(--blue-color);
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--blue-color);
+  border-color: var(--light-blue-color);
+}
+
+.navbar .dropdown-menu a.dropdown-item {
+  color: var(--white-color);
+}
+
+.navbar .dropdown-menu a.dropdown-item:hover {
+  background-color: var(--blue-color);
+  color: var(--yellow-color);
+}
+
+.navbar-dakr .navbar-nav {
+  align-items: flex-start;
+}
+
+.navbar-dark .navbar-nav > .nav-item {
+  margin: 0 0.5rem; /* vodorovná mezera mezi položkami */
+}
+
+/* Základní odkazy v horní navigaci */
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--white-color) !important;
+}
+
+/* Hover stav */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--yellow-color) !important;
+}
+
+/* Hover vzhled submenu – zachování barvy pro .nav-link pøi otevøeném dropdownu */
+.navbar-dark .navbar-nav .nav-link.hover-highlight {
+  color: var(--yellow-color) !important;
+}
+
+/* manualni aktivni vyber */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--yellow-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: var(--white-color) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Carousel */
+.hero-carousel {
+  height: var(--carousel-height, 450px); /* fallback na 450px */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Obsah uvnitø carouselu */
+.carousel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 2;
+}
+
+
+/* DLAŽDICE */
+/*
+.tiles-menu {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+*/
+.tiles-menu {
+  display: flex;
+  justify-content: flex-start; /* flex-end */
+  flex-wrap: nowrap;
+}
+
+
+.tiles-menu a {
+  flex: 1;
+  display: flex;
+  max-width: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: none;
+  height: 100%;
+  border-right: 1px solid white;
+  text-align: center;
+  padding: 0.75rem 1.05rem; /* <-- pøidáno pro horizontální odsazení */
+  box-sizing: border-box;
+}
+
+.tiles-menu a:last-child {
+  border-right: none;
+}
+
+
+/* Nadpis vpravo */
+.hero-caption-box {
+  width: 30%;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+.hero-caption-box h1 {
+  font-size: 1.8rem;
+  margin: 0 0 8px 0;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  padding: 0 1rem;
+}
+
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: var(--yellow-color);
+  opacity: 1;
+}
+
+/* Styl tlaèítka Menu */
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
+  outline: none;
+}
+
+.mobile-menu-toggle.left {
+  text-align: left;
+  padding-left: 0;
+}
+
+.mobile-menu-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mobilní menu – odkazy */
+.mobile-tiles-menu {
+  width: 100%;
+}
+
+.mobile-tiles-menu a {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  color: var(--white-color);
+  /* font-weight: bold; */
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  background-color: var(--blue-color);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Poslední položka bez borderu */
+.mobile-tiles-menu a:last-child {
+  border-bottom: none;
+}
+
+.tiles-menu a:hover,
+.mobile-tiles-menu a:hover {
+  background-color: var(--light-blue-color);
+  color: var(--yellow-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Odstraní poslední mezery i u collapse */
+#tileMenuCollapse {
+  padding: 0;
+  margin: 0;
+}
+
+/* LOGO */
+/* Držák loga mezi položkami menu */
+.logo-holder {
+  width: 200px;
+  background-color: var(--white-color);
+  min-height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  top: -1rem;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 5;
+}
+
+.navbar-logo-img {
+  width: 200px;
+  object-fit: contain;
+  height: auto;
+  padding-top: 2rem;
+  background-color: var(--white-color);
+}
+
+/* Mobilní logo v levém horním rohu karuselu */
+.mobile-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 5;
+  background-color: var(--white-color);
+  padding: 0.25rem 0.1rem;
+  border-radius: 0.5rem;
+}
+
+.mobile-logo img {
+  width: 150px;
+  height: auto;
+}
+
+/* SEARCH */
+form[role="search"] .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+form[role="search"] .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+/* Mobilní úpravy */
+@media (max-width: 768px) {
+  .hero-caption-box {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .tiles-menu a {
+	font-size: 1rem;
+	font-weight: normal;
+  }
+  
+  .hero-caption-box h1 {
+  	font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+	.navbar-dark .navbar-nav > .nav-item {
+	  margin: 0 1px;
+	}
+
+  .logo-holder {
+	  width: 150px !important;
+	}
+
+	.navbar-logo-img {
+	  width: 150px !important;
+	}
+}

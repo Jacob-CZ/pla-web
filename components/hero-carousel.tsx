@@ -107,15 +107,9 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 				{/* Tiles Menu - Desktop */}
 				<div className="hidden md:flex w-full justify-between bg-white text-white gap-1">
 					{tileItems.map((item, index) => (
-						<motion.div
+						<div
 							key={index}
 							className="flex-1 text-center py-4  transition-colors flex items-center justify-center p-2 bg-primary"
-							whileHover={{ scale: 1.05 }}
-							transition={{
-								type: "spring",
-								stiffness: 400,
-								damping: 10,
-							}}
 						>
 							<Link href={item.href}>
 								{item.title.replace(
@@ -123,7 +117,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 									"<br/>"
 								)}
 							</Link>
-						</motion.div>
+						</div>
 					))}
 				</div>
 
