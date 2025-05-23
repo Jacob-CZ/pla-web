@@ -5,21 +5,24 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 
-const slides = [
-	{ image: "/images/slider/bg-1.jpg", title: "SEČSKÁ PŘEHRADA" },
-	{ image: "/images/slider/bg-2.jpg", title: "LES KRÁLOVSTVÍ" },
-	{ image: "/images/slider/bg-3.jpg", title: "PŘEHRADA PAŘÍŽOV" },
-]
+interface SlideImage {
+	url: string
+	label: string
+}
+
+interface HeroCarouselProps {
+	slides: SlideImage[]
+}
 
 const tileItems = [
 	{ title: "Aktuální informace", href: "/home/aktualni-informace" },
-	{ title: "Pro žadatele", href: "#" },
-	{ title: "Zakázky a majetek", href: "#" },
-	{ title: "Info pro veřejnost", href: "#" },
-	{ title: "Odborná veřejnost", href: "#" },
+	{ title: "Pro žadatele", href: "/home/pro-zadatele" },
+	{ title: "Zakázky a majetek", href: "/home/zakazky-a-majetek" },
+	{ title: "Info pro veřejnost", href: "/home/info-pro-verejnost" },
+	{ title: "Odborná veřejnost", href: "/home/odborna-verejnost" },
 ]
 
-export function HeroCarousel() {
+export function HeroCarousel({ slides }: HeroCarouselProps) {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [isPaused, setIsPaused] = useState(false)
 	const intervalRef = useRef<NodeJS.Timeout | null>(null)
@@ -92,7 +95,7 @@ export function HeroCarousel() {
 					transition={{ duration: 1 }}
 					className="absolute inset-0"
 					style={{
-						backgroundImage: `url('${slides[currentIndex].image}')`,
+						backgroundImage: `url('${slides[currentIndex].url}')`,
 						backgroundSize: "cover",
 						backgroundPosition: "center",
 					}}
@@ -133,7 +136,7 @@ export function HeroCarousel() {
 						transition={{ duration: 0.5 }}
 						className="text-2xl md:text-2xl font-bold mb-2"
 					>
-						{slides[currentIndex].title}
+						{slides[currentIndex].label}
 					</motion.h1>
 
 					{/* Carousel Dots */}

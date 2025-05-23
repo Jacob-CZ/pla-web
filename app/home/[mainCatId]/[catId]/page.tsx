@@ -6,9 +6,22 @@ export default async function page({
 }: {
 	params: { mainCatId: string; catId: string }
 }) {
+	console.log("params", params)
 	const supabase = createClient()
 
-	// Get cms_items that belong to the category with the provided slug in a single query
+	// First get the category ID from the slug
+	const { data: category, error: categoryError } = await supabase
+		.from("categories")
+		.select("id")
+		.eq("slug", params.catId)
+		.single()
+
+	if (categoryError || !category) {
+		console.error("Category not found:", categoryError)
+		return <div>Category not found</div>
+	}
+
+	// Then get the CMS items with that category_id
 	const { data: cmsItems, error: cmsError } = await supabase
 		.from("cms_items")
 		.select(
@@ -17,8 +30,9 @@ export default async function page({
 			category:category_id(id, slug)
 		`
 		)
-		.eq("category.slug", params.catId)
+		.eq("category_id", category.id)
 		.order("created_at", { ascending: false })
+	console.log("cmsItems", cmsItems)
 
 	if (cmsError) {
 		console.error("Error fetching content:", cmsError)

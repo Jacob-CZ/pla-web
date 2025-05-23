@@ -5,5 +5,5 @@ export default function page({
 }: {
 	params: { slug: string; catId: string }
 }) {
-	return <Editor prose="lg" category_slug={params.slug} />
+	return <Editor prose="lg" category_slug={params.catId} />
 }

@@ -151,12 +151,21 @@ export function Navbar() {
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
-								<Link href="/test" legacyBehavior passHref>
-									<NavigationMenuTrigger className="bg-transparent hover:bg-primary-700">
-										Profil firmy
-									</NavigationMenuTrigger>
+								<Link
+									href="/home/pozice"
+									legacyBehavior
+									passHref
+								>
+									<NavigationMenuLink className="px-4 py-2 hover:bg-primary-700 rounded-md transition">
+										Volná pracovní místa
+									</NavigationMenuLink>
 								</Link>
+							</NavigationMenuItem>
 
+							<NavigationMenuItem>
+								<NavigationMenuTrigger className="bg-transparent hover:bg-primary-700">
+									Povinná publicita
+								</NavigationMenuTrigger>
 								<NavigationMenuContent>
 									<ul className="grid w-[400px] gap-1 p-2 md:grid-cols-2">
 										{profileItems.map((item) => (
@@ -175,14 +184,6 @@ export function Navbar() {
 										))}
 									</ul>
 								</NavigationMenuContent>
-							</NavigationMenuItem>
-
-							<NavigationMenuItem>
-								<Link href="#" legacyBehavior passHref>
-									<NavigationMenuLink className="px-4 py-2 hover:bg-primary-700 rounded-md transition">
-										Povinná publicita
-									</NavigationMenuLink>
-								</Link>
 							</NavigationMenuItem>
 
 							<NavigationMenuItem>
