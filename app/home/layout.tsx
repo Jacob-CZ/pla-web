@@ -3,6 +3,7 @@ import { HeroCarousel } from "@/components/hero-carousel"
 import { MobileTilesMenu } from "@/components/mobile-tiles-menu"
 import { Navbar } from "@/components/navbar"
 import { createClient } from "@/lib/supabase/server"
+import { redirect } from "next/navigation"
 
 export default async function Layout({
 	children,
